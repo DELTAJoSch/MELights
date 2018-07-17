@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/Icons">
+        <file>Resources/locomotive.png</file>
+    </qresource>
+</RCC>
