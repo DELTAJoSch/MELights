@@ -23,16 +23,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 #Serial Library:
-CONFIG += extserialport
+LIBS += -L"libs/QtFirmata-master/release/libQtFirmata.a"
 
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    serialconnection.cpp
+    firmataconnection.cpp
 
 HEADERS += \
         mainwindow.h \
-    serialconnection.h
+    serialconnection.h \
+    firmataconnection.h
 
 FORMS += \
         mainwindow.ui
@@ -41,3 +42,4 @@ DISTFILES +=
 
 RESOURCES += \
     res.qrc
+INCLUDEPATH += libs/QtFirmata-master

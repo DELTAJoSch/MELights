@@ -32,6 +32,7 @@
     <property name="title">
      <string>MELights</string>
     </property>
+    <addaction name="actionAbout"/>
    </widget>
    <addaction name="menuMELights"/>
   </widget>
@@ -40,10 +41,15 @@
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
