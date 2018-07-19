@@ -6,6 +6,11 @@
 #include <QObject>
 
 
+firmataConnection::firmataConnection(QObject *_parent)
+{
+
+}
+
 void firmataConnection::setPinState(int pinIDS, bool state)
 {
 

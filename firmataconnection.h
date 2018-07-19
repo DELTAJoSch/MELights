@@ -3,11 +3,11 @@
 #include <QObject>
 #include "libs/QtFirmata-master/qtfirmata.h"
 
-class firmataConnection
+class firmataConnection: public QObject
 {
     Q_OBJECT
 public:
-    firmataConnection();
+    firmataConnection(QObject *_parent);
     bool getPinState(int pinIDG);
     void setPinState(int pinIDS, bool state);
 
