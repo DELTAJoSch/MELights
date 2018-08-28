@@ -1,9 +1,8 @@
-#include "firmataconnection.h"
-#include "libs/QtFirmata-master/qtfirmata.h"
 #include <QTimer>
 #include <QCoreApplication>
 #include <QDebug>
 #include <QObject>
+#include <firmataconnection.h>
 
 
 firmataConnection::firmataConnection(QObject *_parent)

@@ -28,20 +28,26 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    firmataconnection.cpp \
-    libs/QtFirmata-master/qtfirmata.cpp
+    firmataconnection.cpp
 
 HEADERS += \
         mainwindow.h \
-    firmataconnection.h \
-    libs/QtFirmata-master/qtfirmata.h
+    firmataconnection.h
 
 FORMS += \
         mainwindow.ui
 
 DISTFILES +=
 
+LIBS +=
+
 RESOURCES += \
     res.qrc
 #INCLUDEPATH += libs/QtFirmata-master
 #DEPENDPATH += $${INCLUDEPATH}
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/libs/QtFirmata-master/release/ -lQtFirmata
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/libs/QtFirmata-master/debug/ -lQtFirmata
+
+INCLUDEPATH += $$PWD/libs/QtFirmata-master/release
+DEPENDPATH += $$PWD/libs/QtFirmata-master/release
